@@ -1,0 +1,22 @@
+<style>
+    .swiper-container {
+        width: 800px;
+        height: 350px;
+    }  
+    .swiper-slide{
+        width: 800px;
+        height: 350px;
+    }
+    .swiper-slide img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+</style>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" ng-repeat="x in imgs">
+            <img ng-src="{{x}}">
+        </div>
+    </div>
+</div>
