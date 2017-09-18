@@ -38,17 +38,10 @@ a {
 	color: #666;
 	cursor: pointer;
 }
-a:hover {
+a:hover,a:active,a:visited,a:focus {
 	text-decoration: none;
 }
-a.underline {
-	font-size: 12px;
-	color: #2255DD;
-	cursor: pointer;
-}
-a.underline:hover {
-	text-decoration: underline;
-}
+
 /***************************a标签 结束**************************-*/
 /***************************浮动/清除浮动开始***************************/
 .clear {

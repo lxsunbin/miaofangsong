@@ -1,5 +1,6 @@
 body{
     background: url('../img/wallpaper.png') repeat-y 0 0;
+    background-size: 100% 100%;
 }
 .swiper-container {
     width: 800px;

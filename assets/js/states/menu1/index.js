@@ -1,8 +1,9 @@
 App.config(function($stateProvider,$urlRouterProvider,$locationProvider){  
-    // $urlRouterProvider.otherwise("/index");
+    $urlRouterProvider.otherwise('error.html');
     $stateProvider.state('menu1', {
         url: "/menu1/menu1.html",
         templateUrl: 'views/menu1/menu1.html',
+        data: {pageTitle: 'menu1'},
         resolve:{
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
