@@ -8,20 +8,38 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="plugins/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="plugins/css/alert-blackgloss.css" type="text/css">
-    <link rel="stylesheet" href="plugins/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_419374_894z1zjra9azto6r.css" type="text/css">
     <link rel="stylesheet" href="plugins/css/swiper.min.css" type="text/css">
     <link rel="stylesheet" href="plugins/css/animate.css" type="text/css">
     <link rel="stylesheet" href="css/global.css" type="text/css">
     <link rel="stylesheet" href="css/dashboard.css" type="text/css">
+    <!-- BEGIN DYMANICLY LOADED CSS/JS FILES -->
+    <link id="ng_load_plugins_before" />
+    <!-- END DYMANICLY LOADED CSS/JS FILES -->
 </head>
 <body ng-controller="AppController" ng-cloak>
+    <!-- 顶部轮播 -->
     <div class="container" style="padding-top:20px">
         <div class="row">
             <my-swiper imgs='swiperArr' options='options'></my-swiper>
         </div>
     </div>
+    <div class="container content">
+        <div class="row clear">
+            <!-- 左侧导航 -->
+            <div class="fl" style="padding-left:0;">
+                <div class="sidebar" style="width:215px;overflow:hidden" ng-include="'./views/tpl/sidebar.html'"></div>
+            </div>
+            <div class="fl p15">
+                <div class="">
+                    <!-- 路由层 -->
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+<!-- 框架scripts begin-->
 <script src="plugins/js/angular.min.js" type="text/javascript"></script> 
 <script src="plugins/js/angular-animate.min.js" type="text/javascript"></script> 
 <script src="plugins/js/angular-ui-router.min.js" type="text/javascript"></script> 
@@ -32,8 +50,16 @@
 <script src="plugins/js/ui-bootstrap-tpls.js" type="text/javascript"></script>
 <script src="plugins/js/bootstrap-notify.min.js" type="text/javascript"></script>
 <script src="plugins/js/ocLazyLoad.min.js" type="text/javascript"></script>
+<!-- 框架scripts end-->
+<!-- 页面scripts begin-->
 <script src="js/main.js" type="text/javascript"></script>
-<script src="js/index.js" type="text/javascript"></script> 
+<!-- 页面scripts end-->
+<!-- 函数方法及指令scripts begin-->
+<script src="js/function.js" type="text/javascript"></script> 
 <script src="js/directive/swiper.js" type="text/javascript"></script>
+<!-- 函数方法及指令scripts end-->
+<!-- 路由scripts begin-->
+<script src="js/states/menu1/index.js" type="text/javascript"></script> 
+<!-- 路由scripts end-->
 </body>
 </html>

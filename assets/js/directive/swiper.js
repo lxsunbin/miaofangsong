@@ -2,7 +2,7 @@
  * @Author: Toma 
  * @Date: 2017-09-15 09:43:10 
  * @Last Modified by: Toma
- * @Last Modified time: 2017-09-15 17:09:02
+ * @Last Modified time: 2017-09-18 16:26:37
  * @description: 轮播插件
  * @e.g. : <my-swiper imgs='arr' options='options'></my-swiper>
  */
@@ -40,7 +40,7 @@ App.directive('mySwiper',function($rootScope,$log){
                 $(ele).hide();
                 return;
             };           
-            var mySwiper = new Swiper('.swiper-container', $scope.options);      
+            var mySwiper = new Swiper('.swiper-container', $scope.options);   
         }
     }
 })

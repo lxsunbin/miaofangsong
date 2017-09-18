@@ -31,7 +31,7 @@ var App=angular.module("App",[
 var assetsPath="./assets/";
 
 App.controller("AppController",function($rootScope,$scope,$timeout){
-    //顶部轮播
+   //顶部轮播
    $scope.swiperArr=[];
    for(var i=1;i<11;i++){
         $scope.swiperArr.push(
@@ -51,4 +51,19 @@ App.controller("AppController",function($rootScope,$scope,$timeout){
         autoplayDisableOnInteraction : false, 
         effect:"coverflow"
    };
+   //左侧导航
+   $scope.changeMenu=function(event){
+        $('.menu_list').slideUp();
+        $('.menu_arrow').css('transform','rotate(0deg)');
+        $('.nav_link').removeClass('current');
+        if($(event.target).parents('li').find('.menu_list').is(':hidden')){
+            $(event.target).parents('li').find('.menu_list').slideDown();
+            $(event.target).parents('li').find('.menu_arrow').css('transform','rotate(90deg)');
+            $(event.target).parents('li').find('.nav_link').addClass('current');
+        }else{
+            $(event.target).parents('li').find('.menu_list').slideUp();
+            $(event.target).parents('li').find('.menu_arrow').css('transform','rotate(0deg)');
+            $(event.target).parents('li').find('.nav_link').removeClass('current');
+        }
+    };
 })

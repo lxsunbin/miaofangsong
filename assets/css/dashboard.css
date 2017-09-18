@@ -14,3 +14,44 @@ body{
     height: 100%;
     border-radius: 10px;
 }
+.content{
+    background: #f7f7f7;
+    border-radius:10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.sidebar{
+    -webkit-box-shadow: 3px -3px 8px #ccc;
+    -moz-box-shadow: 3px -3px 8px #ccc;
+    box-shadow: 3px -3px 8px #ccc;
+}
+.page_sidebar{
+    background: #fff;
+}
+.page_sidebar li{
+    border-bottom: 1px solid #ededed;
+}
+.menu_arrow{
+    transition: all .5s;
+    display: inline-block;
+}
+.nav_link{
+    padding: 12px 20px;
+    width: 230px;
+    display: inline-block;
+}
+.nav_link.current{
+    background: #0095ea;
+    color: #fff;
+}
+.menu_list{
+    background: #f5f5f6;
+}
+.menu_list li{
+    padding-left: 54px;
+    line-height: 40px;
+    border-bottom: none;
+}
+.menu_list li.current{
+    color:#0095ea;
+}
