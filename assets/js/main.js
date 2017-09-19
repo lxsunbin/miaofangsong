@@ -30,7 +30,7 @@ var App=angular.module("App",[
 
 var assetsPath="./assets/";
 
-App.controller("AppController",function($rootScope,$scope,$timeout){
+App.controller("AppController",function($rootScope,$scope,$timeout,$state){   
    //顶部轮播
    $scope.swiperArr=[];
    for(var i=1;i<11;i++){
@@ -66,4 +66,15 @@ App.controller("AppController",function($rootScope,$scope,$timeout){
             $(event.target).parents('li').find('.nav_link').removeClass('current');
         }
     };
-})
+    $scope.listActive=function(event){
+        $('.menu_list li a').removeClass('current');
+        $(event.target).addClass('current');
+    }
+});
+App.run(["$rootScope", "$state", function ($rootScope, $state) {
+    $rootScope.$state = $state; // state to be accessed from view
+    // $rootScope.$on("$stateChangeSuccess",  function(event, toState, toParams, fromState, fromParams) {  
+    //     console.log('changed')
+    // });  
+}]);
+
