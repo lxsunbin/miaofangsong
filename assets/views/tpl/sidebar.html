@@ -6,16 +6,16 @@
                     <a ng-click="changeMenu($event)" class="nav_link">
                         <i class="icon iconfont font24 icon-lanmao2 mr5"></i>
                         <span class="font14 lh24" style="display:inline-block;width:120px;vertical-align:text-bottom">直播&视频</span>
-                        <i class="icon iconfont font18 icon-right menu_arrow"></i>
+                        <i class="icon iconfont font18 icon-right menu_arrow" ng-class="{'current':currentStatus=='live1'||'live2'}"></i>
                     </a>
-                    <ul class="menu_list" style="display:none">
-                        <li ng-click="listActive($event)">
-                            <a ui-sref="live1" href="#!/LiveVideo/live1.html">1号24H猫咪直播</a>
+                    <ul class="menu_list" ng-show="currentStatus=='live1'||'live2'">
+                        <li>
+                            <a ui-sref="live1" href="#!/LiveVideo/live1.html" ng-class="{'current':currentStatus=='live1'}">1号24H猫咪直播</a>
                         </li>
-                        <li ng-click="listActive($event)">
-                            <a ui-sref="live2" href="#!/LiveVideo/live2.html">2号随缘直播</a>
+                        <li>
+                            <a ui-sref="live2" href="#!/LiveVideo/live2.html" ng-class="{'current':currentStatus=='live2'}">2号随缘直播</a>
                         </li>
-                        <li ng-click="listActive($event)">
+                        <li>
                             <a href="javascript:;">视频汇总</a>
                         </li>
                     </ul>
@@ -27,13 +27,13 @@
                         <i class="icon iconfont font18 icon-right menu_arrow"></i>
                     </a>
                     <ul class="menu_list" style="display:none">
-                        <li ng-click="listActive($event)">
+                        <li>
                             <a href="javascript:;">测试1</a>
                         </li>
-                        <li ng-click="listActive($event)">
+                        <li>
                             <a href="javascript:;">测试2</a>
                         </li>
-                        <li ng-click="listActive($event)">
+                        <li>
                             <a href="javascript:;">测试3</a>
                         </li>
                     </ul>

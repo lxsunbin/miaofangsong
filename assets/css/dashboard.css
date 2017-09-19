@@ -34,7 +34,11 @@ body{
 }
 .menu_arrow{
     transition: all .5s;
+    transform: rotate(0deg);
     display: inline-block;
+}
+.menu_arrow.current{
+    transform: rotate(90deg)
 }
 .nav_link{
     padding: 12px 20px;
