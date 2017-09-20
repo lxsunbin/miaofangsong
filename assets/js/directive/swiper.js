@@ -2,7 +2,7 @@
  * @Author: Toma 
  * @Date: 2017-09-15 09:43:10 
  * @Last Modified by: Toma
- * @Last Modified time: 2017-09-18 16:26:37
+ * @Last Modified time: 2017-09-20 16:49:39
  * @description: 轮播插件
  * @e.g. : <my-swiper imgs='arr' options='options'></my-swiper>
  */
@@ -28,6 +28,7 @@ App.directive('mySwiper',function($rootScope,$log){
     return{
         restrict:'EA',
         templateUrl:'views/tpl/swiper.html',
+        replace: true,
         scope:{
             imgs:"=imgs",
             options:"=?options"
