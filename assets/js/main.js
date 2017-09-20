@@ -79,7 +79,6 @@ App.controller("AppController",function($rootScope,$scope,$timeout,$state,$locat
     };
     //页面初始状态及刷新跳转定位
     $rootScope.$on('$stateChangeSuccess',function (event,next,current) {
-        $rootScope.currentStatus=next.name;
         $('#'+$stateParams.tab).addClass('current');
         $('#'+$stateParams.tab).parents('.menu_list').slideDown();
         $('#'+$stateParams.tab).parents('.menu_list').siblings().addClass('current');

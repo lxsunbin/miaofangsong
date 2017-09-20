@@ -3,7 +3,7 @@ angular.module("App").controller('weightController',function($rootScope,$scope,$
     var option = {
         color: ['#3398DB'],
         title : {
-            text: '喵放送主播体重图',
+            text: '喵放送主播体重图（kg）',
             subtext: '2017.9.20更新'
         },
         tooltip: {
@@ -31,13 +31,25 @@ angular.module("App").controller('weightController',function($rootScope,$scope,$
         yAxis: [{
             type: 'value'
         }],
-        series: [{
+        series: 
+        [{
             name: '重量',
             type: 'bar',
             barWidth: '60%',
             data: [4.3, 2, 5, 5.1, 2.3, 1.6, 4.2,3.8, 1.6, 5.2, 3.3, 3.1, 2.7, 2.3,2.1,2.9],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'inside'
+                }
+            },
             markPoint : {
                 symbol:'pin',
+                itemStyle:{
+                    normal:{
+                        color:'green'
+                    }
+                },
                 data : [
                     {type : 'max', name: '最大值'},
                     {type : 'min', name: '最小值'},
