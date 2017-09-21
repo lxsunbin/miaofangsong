@@ -60,3 +60,30 @@ body{
 .menu_list li a.current{
     color:#0095ea;
 }
+.live{
+    border:1px solid #666;
+}
+@keyframes Twinkle{
+    0%{opacity: .5;}  
+    50%{opacity: 1;color: #ff0000;}  
+    100%{opacity: .5;}  
+}
+.remind{
+    animation: Twinkle 4s ease-in infinite;
+    text-align: center; 
+}
+.footer_content{
+    background: #232323;
+    opacity: .8;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 120px;
+    color: #b4b4b4;
+}
+.footer_content a{
+    color: #b4b4b4;
+}
+.footer_content a:hover{
+    color: #fff;
+}
+

@@ -1,5 +1,5 @@
 App.config(function($stateProvider,$urlRouterProvider,$locationProvider){  
-    $urlRouterProvider.otherwise('/LiveVideo/live1.html/1');
+    $urlRouterProvider.otherwise('/LiveVideo/live1.html?tab=1');
     //1号直播间
     $stateProvider.state('live1', {
         url: "/LiveVideo/live1.html?tab",
@@ -31,5 +31,21 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
                 })
             }]
         }
-    })  
+    }) 
+    //视频汇总
+    .state('video', {
+        url: "/LiveVideo/video.html?tab",
+        templateUrl: 'views/LiveVideo/video.html',
+        data: {pageTitle: '视频汇总'},
+        controller:'videoController',
+        params:{tab:null},
+        resolve:{
+            deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'App',
+                    files: ['js/controller/LiveVideo/videoController.js']
+                })
+            }]
+        }
+    })
 });  
