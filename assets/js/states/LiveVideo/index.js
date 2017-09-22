@@ -11,7 +11,10 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
                     name: 'App',
-                    files: ['js/controller/LiveVideo/live1Controller.js']
+                    files: [
+                        'js/controller/LiveVideo/live1Controller.js',
+                        'css/LiveVideo.css'
+                    ]
                 })
             }]
         }
@@ -27,7 +30,10 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
                     name: 'App',
-                    files: ['js/controller/LiveVideo/live2Controller.js']
+                    files: [
+                        'js/controller/LiveVideo/live2Controller.js',
+                        'css/LiveVideo.css'
+                    ]
                 })
             }]
         }
@@ -43,7 +49,10 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
                     name: 'App',
-                    files: ['js/controller/LiveVideo/videoController.js']
+                    files: [
+                        'js/controller/LiveVideo/videoController.js',
+                        'css/LiveVideo.css'
+                    ]
                 })
             }]
         }

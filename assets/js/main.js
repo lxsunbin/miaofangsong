@@ -35,26 +35,42 @@ App.controller("AppController",function($rootScope,$scope,$timeout,$state,$locat
     /*$scope.$on('$locationChangeStart',function (event, newUrl, oldUrl) {
         $location.search('_v', new Date().getTime())
     });*/
-   //顶部轮播
-   $scope.swiperArr=[];
-   for(var i=1;i<11;i++){
-        $scope.swiperArr.push(
-            '../../img/top_swipers/top_swipers_'+i+'.jpg'
-        )
-   };  
-   $scope.swiperPagination=false;
-   $scope.swiperButton=false;
-   $scope.swiperScrollbar=false;
-   $scope.options={
-        direction:'horizontal',       
-        loop: true,
-        autoplay:4000, 
-        speed:2000,   
-        observer:true,           
-        observeParents:true,
-        autoplayDisableOnInteraction : false, 
-        effect:"coverflow"
-   };
+    //联系我
+
+    //顶部轮播
+    $scope.swiperArr=[];
+    for(var i=1;i<11;i++){
+            $scope.swiperArr.push(
+                '../../img/top_swipers/top_swipers_'+i+'.jpg'
+            )
+    };  
+    $scope.swiperPagination=false;
+    $scope.swiperButton=false;
+    $scope.swiperScrollbar=false;
+    $scope.options={
+            direction:'horizontal',       
+            loop: true,
+            autoplay:4000, 
+            speed:2000,   
+            observer:true,           
+            observeParents:true,
+            autoplayDisableOnInteraction : false, 
+            effect:"coverflow"
+    };
+    //回到顶部
+    $(window).scroll(function() {  
+        var $scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop; //兼容浏览器  
+        if($scrollTop > 300) {
+            $("#back_to_top").fadeIn();  
+        } else {  
+            $("#back_to_top").fadeOut();  
+        };  
+    }); 
+    $('#back_to_top').click(function(){
+        $("body").stop().animate({  
+            scrollTop: 0  
+        });  
+    });
    //左侧导航
         //一级菜单
    $scope.changeMenu=function(event){

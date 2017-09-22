@@ -10,7 +10,10 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
                     name: 'App',
-                    files: ['js/controller/CatMaster/weightController.js']
+                    files: [
+                        'js/controller/CatMaster/weightController.js',
+                        'css/CatMaster.css'
+                    ]
                 })
             }]
         }

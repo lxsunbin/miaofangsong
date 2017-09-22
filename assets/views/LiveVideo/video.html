@@ -1,2 +1,22 @@
-<iframe src="http://www.bilibili.com/html/html5player.html?aid=14387031&cid=23475167" width="900" height="500" frameborder="no"></iframe>
-<div>https://www.biliplus.com/</div>
+<div class="video">
+    <h4 class="mb10" style="max-width:900px">{{video_title}}</h4>
+    <div style="border:1px solid #ededed">
+        <iframe ng-src="{{video_src}}" width="900" height="500" frameborder="no"></iframe>
+    </div>
+    <div class="video_imgs font12 mt10">
+        <ul class="clear">
+            <li ng-repeat="video in videos">
+                <div class="thumbnail" title="{{video.video_brief}}" ng-click="getSrc($event)">
+                    <img ng-src="{{video.thumbnail}}">
+                    <span class="video_time">{{video.video_time}}</span>
+                    <i class="icon iconfont icon-shipin font24"></i>
+                    <a href="{{video.video_src}}"></a>
+                </div> 
+                <div class="video_brief" title="{{video.video_brief}}" ng-click="getSrc($event)">{{video.video_brief}}</div>   
+            </li>
+            <li class="font16 more_video">
+                <a href="https://space.bilibili.com/324341?from=search&seid=1735184372398694785#!/video?keyword=&order=pubdate&page=1&tid=0" target="_blank">更多视频请点击这里<i class="icon iconfont icon-maobi font20 ml5"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>

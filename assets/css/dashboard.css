@@ -60,18 +60,6 @@ body{
 .menu_list li a.current{
     color:#0095ea;
 }
-.live{
-    border:1px solid #666;
-}
-@keyframes Twinkle{
-    0%{opacity: .5;}  
-    50%{opacity: 1;color: #ff0000;}  
-    100%{opacity: .5;}  
-}
-.remind{
-    animation: Twinkle 4s ease-in infinite;
-    text-align: center; 
-}
 .footer_content{
     background: #232323;
     opacity: .8;
@@ -86,4 +74,28 @@ body{
 .footer_content a:hover{
     color: #fff;
 }
-
+#back_to_top{
+    display: inline-block;
+    position: fixed;
+    right:20px;
+    top:450px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    display: none;
+}
+#back_to_top i{
+    margin-left: -15px;
+}
+#connect_me{
+    position: absolute;
+    width: 80px;
+    height: 72px;
+    right:100px;
+    top:150px;
+    color: #fff;
+    cursor: pointer;
+    border: 3px solid orange;
+    border-radius: 10px;
+}

@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="plugins/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="plugins/css/alert-blackgloss.css" type="text/css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_419374_894z1zjra9azto6r.css" type="text/css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_419374_cppmf0zye5ng66r.css">
     <link rel="stylesheet" href="plugins/css/swiper.min.css" type="text/css">
     <link rel="stylesheet" href="plugins/css/animate.css" type="text/css">
     <link rel="stylesheet" href="css/global.css" type="text/css">
@@ -16,6 +16,44 @@
     <!-- Above DYMANICLY LOADED CSS/JS FILES -->
 </head>
 <body ng-controller="AppController" ng-cloak>
+    <!-- 联系作者 begin -->
+    <div id="connect_me" class="txtC" data-toggle="modal" data-target="#connectModal">
+        <i class="icon iconfont icon-lianxiwomen font30"></i><br/>
+        联系作者       
+    </div>
+         <!-- 模态框（Modal） -->
+    <div class="modal fade" id="connectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+                </div>
+                <div class="modal-body" style="text-indent:2em">
+                    作为一名从14年底开始看喵放送的狗党，喵放送已经成为我生活中不可分割的一部分，一天不看浑身难受。恰逢最近工作轻松，所以自己一边想一边做了这个网站，由于一个人的力量是有限的，希望广大喵放送观众及各大党派成员能踊跃提出自己的改进意见，各种意见都可以提，比如需要添加什么内容，哪里的东西需要改进等等，我会尽快更新网站内容，谢谢大家~！
+                    <div class="mt10">
+                        <p>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=303565160&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:303565160:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+                        </p>
+                        <p class="mt10">
+                            <img src="img/mail_icon.jpg" width="20" height="20" class="mr5">
+                            <span>lxsunbin@163.com</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+                </div>
+            </div><
+        </div>
+    </div>
+    <!-- 联系作者 end -->
+    <!-- 回到顶部 begin -->
+    <div id="back_to_top">
+            <i class="icon iconfont icon-huidaodingbu-copy font30"></i>
+        </div>
+        <!-- 回到顶部 end -->
     <!-- 顶部轮播 begin-->
     <div class="container" style="padding-top:20px">
         <div class="row">
@@ -39,10 +77,9 @@
             </div>
         </div>
     </div>
-    <!-- footer begin-->
+    <!-- 底部 begin-->
     <div class="footer mt30" ng-include="'./views/tpl/footer.html'"></div>
-    <!-- footer begin-->
-
+    <!-- 底部 end-->
 <!-- 框架scripts begin-->
 <script src="plugins/js/angular.min.js" type="text/javascript"></script> 
 <script src="plugins/js/angular-animate.min.js" type="text/javascript"></script> 

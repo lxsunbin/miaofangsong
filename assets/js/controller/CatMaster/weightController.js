@@ -1,4 +1,5 @@
 angular.module("App").controller('weightController',function($rootScope,$scope,$state){
+//体重echarts图表
     var myChart = echarts.init(document.getElementById('weightChart')); 
     //上上次数据
     var weightDataOlder= [4.0,4.0,3.3,4.2,3.1,3.2,2.9,1.5,1.8,1.1,1.2,1.1,1.6,1.2,2.1,1.2,1.1];

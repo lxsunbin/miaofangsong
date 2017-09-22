@@ -1,3 +1,26 @@
-angular.module("App").controller('videoController',function($rootScope,$scope,$state){
-    
+angular.module("App").controller('videoController',function($rootScope,$scope,$state,$sce,$http){
+    //初始显示
+    $scope.video_src=$sce.trustAsResourceUrl('http://www.bilibili.com/html/html5player.html?aid=14387031&cid=23475167');
+    $scope.video_title='喵放送20170911罐头日活动~还有喂小歪喝奶';
+    $scope.videos=[];
+    //请求视频列表数据
+    $http({
+        url:'json/video_list.json',
+        method:'get'
+    }).then(function(res){
+        if(!res.data.list){
+            Layout.showError("获取数据失败，请刷新页面...");
+            return;
+        }
+        $scope.videos=res.data.list;
+        console.log($scope.videos)
+    },function(){
+        Layout.showError("请求错误...");
+    })
+    //点击更换视频
+    $scope.getSrc=function(event){
+        $scope.video_src=$(event.target).parents('li').find('a').attr('href');
+        $scope.video_src=$sce.trustAsResourceUrl($scope.video_src);
+        $scope.video_title=$(event.target).parents('li').find('.video_brief').attr('title');
+    }
 })
