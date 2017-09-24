@@ -41,7 +41,7 @@ App.controller("AppController",function($rootScope,$scope,$timeout,$state,$locat
     $scope.swiperArr=[];
     for(var i=1;i<11;i++){
             $scope.swiperArr.push(
-                '../../img/top_swipers/top_swipers_'+i+'.jpg'
+                'img/top_swipers/top_swipers_'+i+'.jpg'
             )
     };  
     $scope.swiperPagination=false;
