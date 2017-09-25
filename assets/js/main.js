@@ -88,17 +88,17 @@ App.controller("AppController",function($rootScope,$scope,$timeout,$state,$locat
         };
     };
         //二级菜单
-    $scope.secMenu=function(event,sref,tab){
+    $scope.secMenu=function(event,sref){
         $('.menu_list li a').removeClass('current');
         $(event.target).addClass('current');
-        $state.go(sref,{'tab':tab})
+        $state.go(sref,{'menu':sref})
     };
     //页面初始状态及刷新跳转定位
     $rootScope.$on('$stateChangeSuccess',function (event,next,current) {
-        $('#'+$stateParams.tab).addClass('current');
-        $('#'+$stateParams.tab).parents('.menu_list').slideDown();
-        $('#'+$stateParams.tab).parents('.menu_list').siblings().addClass('current');
-        $('#'+$stateParams.tab).parents('.menu_list').siblings().find('.menu_arrow').addClass('current');
+        $('#'+$stateParams.menu).addClass('current');
+        $('#'+$stateParams.menu).parents('.menu_list').slideDown();
+        $('#'+$stateParams.menu).parents('.menu_list').siblings().addClass('current');
+        $('#'+$stateParams.menu).parents('.menu_list').siblings().find('.menu_arrow').addClass('current');
     })
 });
 //全局参数及路由跳转设置

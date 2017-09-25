@@ -1,11 +1,11 @@
 App.config(function($stateProvider,$urlRouterProvider,$locationProvider){  
     //1号直播间
     $stateProvider.state('weight', {
-        url: "/CatMaster/weight.html?tab",
+        url: "/CatMaster/weight.html?menu",
         templateUrl: 'views/CatMaster/weight.html',
         data: {pageTitle: '主播体重'},
         controller:'weightController',
-        params:{tab:null},
+        params:{menu:null},
         resolve:{
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({

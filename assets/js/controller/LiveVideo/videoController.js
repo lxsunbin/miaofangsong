@@ -13,10 +13,9 @@ angular.module("App").controller('videoController',function($rootScope,$scope,$s
             return;
         }
         $scope.videos=res.data.list;
-        console.log($scope.videos)
     },function(){
         Layout.showError("请求错误...");
-    })
+    });
     //点击更换视频
     $scope.getSrc=function(event){
         $scope.video_src=$(event.target).parents('li').find('a').attr('href');

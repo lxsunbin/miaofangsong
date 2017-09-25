@@ -82,11 +82,17 @@ body{
     cursor: pointer;
     width: 35px;
     height: 35px;
+    border-radius:35px;
     overflow: hidden;
     display: none;
+    z-index: 10;
+    background: #333;
 }
 #back_to_top i{
-    margin-left: -15px;
+    display: inline-block;
+    color: #fff;
+    margin-left: 2px;
+    margin-top: -3px;
 }
 #connect_me{
     position: absolute;

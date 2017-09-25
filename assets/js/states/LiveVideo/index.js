@@ -1,12 +1,12 @@
 App.config(function($stateProvider,$urlRouterProvider,$locationProvider){  
-    $urlRouterProvider.otherwise('/LiveVideo/live1.html?tab=1');
+    $urlRouterProvider.otherwise('/LiveVideo/live1.html?menu=live1');
     //1号直播间
     $stateProvider.state('live1', {
-        url: "/LiveVideo/live1.html?tab",
+        url: "/LiveVideo/live1.html?menu",
         templateUrl: 'views/LiveVideo/live1.html',
         data: {pageTitle: '24H猫咪直播间---1号直播间'},
         controller:'live1Controller',
-        params:{tab:null},
+        params:{menu:null},
         resolve:{
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
@@ -21,11 +21,11 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
     }) 
     //2号直播间
     .state('live2', {
-        url: "/LiveVideo/live2.html?tab",
+        url: "/LiveVideo/live2.html?menu",
         templateUrl: 'views/LiveVideo/live2.html',
         data: {pageTitle: '随缘直播间（游戏，户外）---2号直播间'},
         controller:'live2Controller',
-        params:{tab:null},
+        params:{menu:null},
         resolve:{
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
@@ -40,11 +40,11 @@ App.config(function($stateProvider,$urlRouterProvider,$locationProvider){
     }) 
     //视频汇总
     .state('video', {
-        url: "/LiveVideo/video.html?tab",
+        url: "/LiveVideo/video.html?menu",
         templateUrl: 'views/LiveVideo/video.html',
         data: {pageTitle: '视频汇总'},
         controller:'videoController',
-        params:{tab:null},
+        params:{menu:null},
         resolve:{
             deps: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
