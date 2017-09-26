@@ -1,0 +1,20 @@
+.introduce{
+    width: 920px;
+}
+.master{
+    border-bottom: 1px dashed #666;
+    padding-bottom: 30px;
+}
+.master_img{
+    border-radius: 10px;
+    overflow: hidden;  
+}
+.master_img img{
+    transition: all .5s ease-in;
+}
+.master_img:hover img{
+    transform: scale(1.1)
+}
+.master_txt{
+    width: 400px;
+}
