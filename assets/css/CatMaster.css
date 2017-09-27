@@ -1,9 +1,9 @@
 .introduce{
     width: 920px;
 }
-.master{
+.masters{
     border-bottom: 1px dashed #666;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 .master_img{
     border-radius: 10px;
@@ -17,4 +17,26 @@
 }
 .master_txt{
     width: 400px;
+}
+.cats ul{
+    width: 1000px;
+}
+.cats li{
+    width: 460px;
+    float: left;
+    margin-bottom: 15px;
+}
+.cat_txt{
+    width: 242px;    
+    padding-top: 5px;
+}
+.cat_img{
+    border-radius: 10px;
+    overflow: hidden;  
+}
+.cat_img img{
+    transition: all .5s ease-in;
+}
+.cat_img:hover img{
+    transform: scale(1.1)
 }
