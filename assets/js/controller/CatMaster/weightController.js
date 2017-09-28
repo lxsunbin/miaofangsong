@@ -35,7 +35,7 @@ angular.module("App").controller('weightController',function($rootScope,$scope,$
         },
         xAxis: [{
             type: 'category',
-            data: ['狗丁','猴子','泡椒','奥丁','缪缪','可乐','蛋挞','汤圆','酒酿','西柚','奶茶','咖啡','牛油果','奶黄包','豆沙包','西瓜','三明治'],
+            data: ['布丁','泡芙','泡椒','奥丁','缪斯','可乐','蛋挞','汤圆','酒酿','西柚','奶茶','咖啡','牛油果','奶黄包','豆沙包','西瓜','三明治'],
             axisTick: {
                 alignWithLabel: true
             }

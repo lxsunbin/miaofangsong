@@ -40,3 +40,11 @@
 .cat_img:hover img{
     transform: scale(1.1)
 }
+.gray_img{
+    -webkit-filter: grayscale(100%); 
+    -moz-filter: grayscale(100%); 
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+    filter: gray; 
+}
