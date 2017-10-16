@@ -67,8 +67,8 @@ App.controller("AppController",function($rootScope,$scope,$timeout,$state,$locat
         };  
     }); 
     $('#back_to_top').click(function(){
-        $("body").stop().animate({  
-            scrollTop: 0  
+        $("html,body").stop().animate({  
+            'scrollTop': 0  
         });  
     });
    //左侧导航
