@@ -1,6 +1,6 @@
 angular.module("App").controller('videoController',function($rootScope,$scope,$state,$sce,$http){
     //初始显示
-    $scope.video_src=$sce.trustAsResourceUrl('http://www.bilibili.com/html/html5player.html?aid=14387031&cid=23475167');
+    $scope.video_src=$sce.trustAsResourceUrl('https://www.bilibili.com/blackboard/html5player.html?aid=14387031&cid=23475167');
     $scope.video_title='喵放送20170911罐头日活动~还有喂小歪喝奶';
     $scope.videos=[];
     //请求视频列表数据

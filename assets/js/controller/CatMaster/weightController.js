@@ -75,7 +75,7 @@ angular.module("App").controller('weightController', function ($rootScope, $scop
             {
                 name: '2017-08-31',
                 type: 'bar',
-                color: ['#cc9b18'],
+                color: ['#ffc100'],
                 data: weightDataOld,
                 label: {
                     normal: {
@@ -90,7 +90,7 @@ angular.module("App").controller('weightController', function ($rootScope, $scop
             {
                 name: '2017-09-30',
                 type: 'bar',
-                color: ['#cc9b18'],
+                color: ['#90cf43'],
                 data: weightDataNew,
                 label: {
                     normal: {
