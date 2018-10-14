@@ -17,7 +17,7 @@ var server=http.createServer(function(req,res){
 });
 server.listen(8081)
 
-//妈的买错服务器了，不支持Node.js----
+
 
 /*const express=require('express');
 const static=require('express-static');
