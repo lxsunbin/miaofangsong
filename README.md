@@ -1,5 +1,5 @@
 # miaofangsong
 
-https://mfs.cool
+http://lxsunbin.github.io/
 
 已重做
